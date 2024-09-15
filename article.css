@@ -1,0 +1,121 @@
+/* Colors */
+:root{  /*targeting root pseudo class */
+
+    --on-background:rgb(66, 66, 66);
+    --on-background-dark:rgb(31, 31, 31);
+    --on-backgound-dark-hover:rgb(88, 88, 88);
+    --box-shadow:rgba(0, 0, 0, 0.1);
+    --background:rgb(255, 255, 255);
+      
+  }
+  
+  [data-theme="dark"] {
+    --on-background: rgb(255, 255, 255, 0.9);
+    --on-background-dark:hsl(0, 0%, 97%);
+    --on-backgound-dark-hover:rgb(212, 210, 210);
+    --box-shadow:rgba(255, 255, 255, 0.2);
+    --background: rgb(18, 18, 18);
+  }
+
+
+
+article{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-content{
+    width: 75ch;
+    margin: auto 20px;
+}
+img{
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+
+p{
+    font-size: 1.2rem;
+    color: var(--on-backgound-dark-hover);
+}
+
+/* Image Psition Variations */
+.centered-image-article img{
+    width: 100%;
+    max-height: 45vh;
+    margin-bottom: 30px;
+}
+
+.left-image-article {
+    flex-direction: row;
+    align-items: start;
+}
+
+.right-image-article {
+    flex-direction: row-reverse;
+    align-items: start;
+}
+
+/* Media Queries ------------------ */
+
+/* Tablet Vertical */
+@media screen and (max-width: 1025px) {
+    article {
+        width: 95%;
+        margin: 30px auto;
+    }
+
+    .text-content {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    /* Variations */
+    .centered-image-article img {
+        max-height: 35vh;
+        margin-bottom: 20px;
+    }
+
+    .left-image-article, .right-image-article {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-image-article img, .right-image-article img {
+        width: 100%; 
+        height: auto;
+        max-height: 35vh;
+        margin-bottom: 20px;
+    }
+
+}
+
+/* Smartphone Vertical */
+@media screen and (max-width: 600px) {
+    article, .text-content {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
